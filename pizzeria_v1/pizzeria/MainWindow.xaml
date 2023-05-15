@@ -1,0 +1,16 @@
+﻿<Window x:Class="pizzeria.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pizzeria"
+        mc:Ignorable="d"
+        Title="pizza" Height="757.8" Width="1152">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/заставка.jpg"/>
+        </Grid.Background>
+        <Button x:Name="startbutton" Content="START" HorizontalAlignment="Left" Margin="731,315,0,0" VerticalAlignment="Top" Click="Startbutton_Click" Height="49" Width="108" FontSize="20" FontFamily="Century Schoolbook" Foreground="#FF77321E" Background="#FFF2CE9A" BorderBrush="#FF551A15"/>
+
+    </Grid>
+</Window>

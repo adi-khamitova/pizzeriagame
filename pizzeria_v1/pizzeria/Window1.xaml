@@ -1,0 +1,282 @@
+﻿<Window x:Class="pizzeria.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pizzeria"
+        mc:Ignorable="d"
+        Title="pizza" Height="768" Width="1152">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius ="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" Margin="0,0,14,11">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <ContentPresenter.OpacityMask>
+                                    <ImageBrush ImageSource="/pepperoni.png"/>
+                                </ContentPresenter.OpacityMask>
+                            </ContentPresenter>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FocusVisual1">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background1" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border1" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background1" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border1" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background1" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border1" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background1}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border1}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius ="15" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" Margin="0,8,0,0" Width="42">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border1}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground1}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/Untitled Project(4).jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Untitled Project(4).jpg"/>
+        </Grid.Background>
+        <Canvas Name="DragArena">
+            <Ellipse x:Name="pepperoni12"
+                Width="37" Height="38"
+                Canvas.Left="731" Canvas.Top="122"
+                MouseLeftButtonDown="StartDrag">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni10"
+                Width="36" Height="36"
+                Canvas.Left="783" Canvas.Top="153"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-43.923"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni8"
+                Width="36" Height="36"
+                Canvas.Left="747" Canvas.Top="105"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni7"
+                Width="37" Height="38"
+                Canvas.Left="734" Canvas.Top="138"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni4"
+                Width="37" Height="37"
+                Canvas.Left="808" Canvas.Top="140"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni11"
+                Width="37" Height="37"
+                Canvas.Left="790" Canvas.Top="107"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni9"
+                Width="38" Height="37"
+                Canvas.Left="808" Canvas.Top="122"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni6"
+                Width="38" Height="37"
+                Canvas.Left="752" Canvas.Top="121"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni5"
+                Width="36" Height="36"
+                Canvas.Left="773" Canvas.Top="123"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni3"
+                Width="38" Height="38"
+                Canvas.Left="747" Canvas.Top="158"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni1"
+                Width="38" Height="38"
+                Canvas.Left="712" Canvas.Top="115"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse x:Name="pepperoni2"
+                Width="37" Height="36"
+                Canvas.Left="710" Canvas.Top="140"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/pepperoni.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Rectangle x:Name="spinach3"
+                Width="84" Height="52"
+                Canvas.Left="871" Canvas.Top="122"
+                MouseLeftButtonDown="StartDrag">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/шпинат.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="spinach2"
+                Width="84" Height="52"
+                Canvas.Left="913" Canvas.Top="131"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-127.594"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/шпинат.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle x:Name="spinach1"
+                Width="84" Height="52"
+                Canvas.Left="951" Canvas.Top="120"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="103.082"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/шпинат.png"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="tomatobutton" Content="" Canvas.Left="576" Canvas.Top="148" HorizontalAlignment="Center" Height="46" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button Style="{DynamicResource ButtonStyle1}" x:Name="cheesebutton" Content="" Canvas.Left="670" Canvas.Top="73" Height="46" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" Click="cheesebutton_Click"/>
+        </Canvas>
+    </Grid>
+
+</Window>
