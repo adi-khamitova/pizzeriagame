@@ -21,6 +21,11 @@ namespace pizzeria
     {
         Vector relativeMousePos;
         FrameworkElement draggedObject;
+        private int tomato = 0, cheese = 0;
+        private int[,] coordinates = new int[12, 2];
+        private double currx, curry;
+
+        int count = 0;
         public Window1()
         {
             InitializeComponent();
@@ -29,6 +34,13 @@ namespace pizzeria
         void StartDrag(object sender, MouseButtonEventArgs e)
         {
             draggedObject = (FrameworkElement)sender;
+            var point = e.GetPosition(DragArena);
+            var newPos = point - relativeMousePos;
+            currx = newPos.X;
+            curry = newPos.Y;
+            if ((currx - 858)*(currx - 858) + (curry - 472)*(curry - 472) <= 150*150) {
+                count--;
+            }
             relativeMousePos = e.GetPosition(draggedObject) - new Point();
             draggedObject.MouseMove += OnDragMove;
             draggedObject.LostMouseCapture += OnLostCapture;
@@ -39,12 +51,13 @@ namespace pizzeria
         {
             UpdatePosition(e);
         }
-        void UpdatePosition(MouseEventArgs e)
+        Point UpdatePosition(MouseEventArgs e)
         {
             var point = e.GetPosition(DragArena);
             var newPos = point - relativeMousePos;
             Canvas.SetLeft(draggedObject, newPos.X);
             Canvas.SetTop(draggedObject, newPos.Y);
+            return newPos;
         }
         void OnMouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -61,11 +74,46 @@ namespace pizzeria
             draggedObject.MouseMove -= OnDragMove;
             draggedObject.LostMouseCapture -= OnLostCapture;
             draggedObject.MouseUp -= OnMouseUp;
-            UpdatePosition(e);
+            Point newPos = UpdatePosition(e);
+            currx = newPos.X;
+            curry = newPos.Y;
+            if ((currx - 858) * (currx - 858) + (curry - 472) * (curry - 472) <= 150*150)
+            {
+                count++;
+            }
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 window2 = new Window2(count);
+            window2.Show();
+            this.Close();
         }
 
         private void cheesebutton_Click(object sender, RoutedEventArgs e)
         {
+            if (tomato == 0)
+            {
+                this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroungwithcheese.jpg", UriKind.RelativeOrAbsolute)) };
+            }
+            else
+            {
+                this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroudwithpastaandcheese.jpg", UriKind.RelativeOrAbsolute)) };
+            }
+            cheese = 1;
+        }
+
+        private void tomatobutton_Click(object sender, RoutedEventArgs e)
+        {
+            if (cheese == 0)
+            {
+                this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroundwithpasta.jpg", UriKind.RelativeOrAbsolute)) };
+            }
+            else
+            {
+                this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroudwithpastaandcheese.jpg", UriKind.RelativeOrAbsolute)) };
+            }
+            tomato = 1;
         }
     }
 }

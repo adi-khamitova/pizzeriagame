@@ -126,13 +126,10 @@
         <ImageBrush ImageSource="/Untitled Project(4).jpg"/>
     </Window.Background>
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Untitled Project(4).jpg"/>
-        </Grid.Background>
         <Canvas Name="DragArena">
             <Ellipse x:Name="pepperoni12"
-                Width="37" Height="38"
-                Canvas.Left="731" Canvas.Top="122"
+                Width="36" Height="36"
+                Canvas.Left="725" Canvas.Top="106"
                 MouseLeftButtonDown="StartDrag">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
@@ -140,7 +137,7 @@
             </Ellipse>
             <Ellipse x:Name="pepperoni10"
                 Width="36" Height="36"
-                Canvas.Left="783" Canvas.Top="153"
+                Canvas.Left="774" Canvas.Top="122"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                 <Ellipse.RenderTransform>
                     <TransformGroup>
@@ -156,47 +153,47 @@
             </Ellipse>
             <Ellipse x:Name="pepperoni8"
                 Width="36" Height="36"
-                Canvas.Left="747" Canvas.Top="105"
+                Canvas.Left="732" Canvas.Top="143"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni7"
-                Width="37" Height="38"
-                Canvas.Left="734" Canvas.Top="138"
+                Width="36" Height="36"
+                Canvas.Left="707" Canvas.Top="102"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni4"
-                Width="37" Height="37"
-                Canvas.Left="808" Canvas.Top="140"
+                Width="36" Height="36"
+                Canvas.Left="750" Canvas.Top="120"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni11"
-                Width="37" Height="37"
-                Canvas.Left="790" Canvas.Top="107"
+                Width="36" Height="36"
+                Canvas.Left="714" Canvas.Top="129"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni9"
-                Width="38" Height="37"
-                Canvas.Left="808" Canvas.Top="122"
-                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Center">
+                Width="36" Height="36"
+                Canvas.Left="786" Canvas.Top="138"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni6"
-                Width="38" Height="37"
-                Canvas.Left="752" Canvas.Top="121"
+                Width="36" Height="36"
+                Canvas.Left="755" Canvas.Top="106"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
@@ -204,48 +201,48 @@
             </Ellipse>
             <Ellipse x:Name="pepperoni5"
                 Width="36" Height="36"
-                Canvas.Left="773" Canvas.Top="123"
+                Canvas.Left="768" Canvas.Top="102"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni3"
-                Width="38" Height="38"
-                Canvas.Left="747" Canvas.Top="158"
+                Width="36" Height="36"
+                Canvas.Left="755" Canvas.Top="143"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni1"
-                Width="38" Height="38"
-                Canvas.Left="712" Canvas.Top="115"
+                Width="36" Height="36"
+                Canvas.Left="691" Canvas.Top="124"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Ellipse x:Name="pepperoni2"
-                Width="37" Height="36"
-                Canvas.Left="710" Canvas.Top="140"
+                Width="36" Height="36"
+                Canvas.Left="791" Canvas.Top="111"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="/pepperoni.png"/>
                 </Ellipse.Fill>
             </Ellipse>
             <Rectangle x:Name="spinach3"
-                Width="84" Height="52"
-                Canvas.Left="871" Canvas.Top="122"
+                Width="65" Height="54"
+                Canvas.Left="874" Canvas.Top="115"
                 MouseLeftButtonDown="StartDrag">
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="/шпинат.png"/>
                 </Rectangle.Fill>
             </Rectangle>
             <Rectangle x:Name="spinach2"
-                Width="84" Height="52"
-                Canvas.Left="913" Canvas.Top="131"
-                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+                Width="79" Height="44"
+                Canvas.Left="903" Canvas.Top="125"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -259,8 +256,8 @@
                 </Rectangle.Fill>
             </Rectangle>
             <Rectangle x:Name="spinach1"
-                Width="84" Height="52"
-                Canvas.Left="951" Canvas.Top="120"
+                Width="78" Height="58"
+                Canvas.Left="938" Canvas.Top="105"
                 MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
                     <TransformGroup>
@@ -274,8 +271,18 @@
                     <ImageBrush ImageSource="/шпинат.png"/>
                 </Rectangle.Fill>
             </Rectangle>
-            <Button Style="{DynamicResource ButtonStyle1}" x:Name="tomatobutton" Content="" Canvas.Left="576" Canvas.Top="148" HorizontalAlignment="Center" Height="46" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
-            <Button Style="{DynamicResource ButtonStyle1}" x:Name="cheesebutton" Content="" Canvas.Left="670" Canvas.Top="73" Height="46" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" Click="cheesebutton_Click"/>
+            <Button x:Name="nextbutton" Content="NEXT" Canvas.Left="995" Canvas.Top="667" Height="35" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top" Click="NextButton_Click" FontFamily="Century Schoolbook" FontSize="20" Background="#FFF2CE9E" Foreground="#FF77321E" BorderBrush="#FF551A15"/>
+            <Button x:Name="cheesebutton" Content="CHEESE" Canvas.Left="633" Canvas.Top="73" Height="34" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Century Schoolbook" FontSize="16" Click="cheesebutton_Click"/>
+            <Button x:Name="tomatobutton" Content="TOMATO" Canvas.Left="540" Canvas.Top="161" Height="33" Width="94" FontFamily="Century Schoolbook" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center" Click="tomatobutton_Click">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-91.252"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
         </Canvas>
     </Grid>
 
