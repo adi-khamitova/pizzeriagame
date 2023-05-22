@@ -19,23 +19,17 @@ namespace pizzeria
     /// </summary>
     public partial class Window2 : Window
     {
-        private int count;
-        public Window2(int c)
+        private string result;
+        public Window2(double r)
         {
             InitializeComponent();
-            count = c;
+            result = Convert.ToString(r);
+            ResultBox();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void ResultBox()
         {
-            if (count >= 3)
-            {
-                this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroudwithpastaandcheese.jpg", UriKind.RelativeOrAbsolute)) };
-            }
-            else
-            {
-                this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroundwithpasta.jpg", UriKind.RelativeOrAbsolute)) };
-            }
+            resultbox.Content = "Your pizza is " + result + " from 100!\n Thanks!";
         }
     }
 }

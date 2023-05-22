@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizzeria"
         mc:Ignorable="d"
-        Title="pizza" Height="768" Width="1152">
+        Title="pizza" Height="768" Width="1152"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    <Window.Background>
+        <ImageBrush ImageSource="/фонпотемнееспечью.jpg"/>
+    </Window.Background>
     <Grid>
-        
+        <MediaElement x:Name="firegif" HorizontalAlignment="Left" Height="117" Margin="308,372,0,0" VerticalAlignment="Top" MediaEnded ="MediaElement_MediaEnded" Width="172" 
+                      RenderTransformOrigin="0.432,0.309" LoadedBehavior="Play" Stretch="Fill" SpeedRatio="1" IsMuted="False" Source="firedrova.gif">
+            <MediaElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-7.944"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </MediaElement.RenderTransform>
+        </MediaElement>
+        <Canvas Name="DragArena">
+            <Ellipse x:Name="pepperoni12"
+                Width="204" Height="107"
+                Canvas.Left="724" Canvas.Top="394"
+                MouseLeftButtonDown="StartDrag" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/пиццаобрез.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
     </Grid>
 </Window>

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace pizzeria
 {
@@ -85,8 +86,16 @@ namespace pizzeria
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            Window2 window2 = new Window2(count);
-            window2.Show();
+            Window3 window3 = new Window3(count, increment);
+            window3.Show();
+            l = 0;
+            this.Close();
+        }
+
+        private void NextWindow()
+        {
+            Window3 window3 = new Window3(count, increment);
+            window3.Show();
             this.Close();
         }
 
@@ -114,6 +123,30 @@ namespace pizzeria
                 this.Background = new ImageBrush { ImageSource = new BitmapImage(new Uri("C:\\аделя\\pizzeria\\pizzeria\\backgroudwithpastaandcheese.jpg", UriKind.RelativeOrAbsolute)) };
             }
             tomato = 1;
+        }
+        private void Window1_Loaded(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer dt = new DispatcherTimer();
+            dt.Interval = TimeSpan.FromSeconds(1);
+            dt.Tick += dtTicker;
+            dt.Start();
+        }
+
+        private int increment = 60;
+        int l = 1;
+        private void dtTicker(object? sender, EventArgs e)
+        {
+            if (l == 1)
+            {
+                increment--;
+
+                TimerLabel.Content = increment.ToString();
+                if (increment == 0)
+                {
+                    NextWindow();
+                    l = 0;
+                }
+            }
         }
     }
 }

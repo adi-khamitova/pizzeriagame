@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizzeria"
         mc:Ignorable="d"
-        Title="pizza" Height="768" Width="1152">
+        Title="pizza" Height="768" Width="1152"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/заставка.jpg"/>

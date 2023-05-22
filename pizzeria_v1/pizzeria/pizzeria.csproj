@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="backgroundfor3_3.jpg" />
     <None Remove="cheese.png" />
     <None Remove="paste.png" />
     <None Remove="pepperoni.png" />
@@ -17,10 +18,17 @@
     <None Remove="нарисуй кусочек сыра_Kandinsky 2.1 %281%29.png" />
     <None Remove="нарисуй кусочек сыра_Kandinsky 2.1.png" />
     <None Remove="нарисуй_баночку_от_томатной_пасты_hainz_Kandinsky_2_1 %281%29.png" />
+    <None Remove="пиццаобрез.png" />
+    <None Remove="пиццасбоку.png" />
+    <None Remove="фонпотемнееспечью.jpg" />
+    <None Remove="фонспесьюиогнем %281%29.jpg" />
+    <None Remove="фонспечью.jpg" />
+    <None Remove="фонспечьютемнее.jpg" />
     <None Remove="шпинат.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="backgroundfor3_3.jpg" />
     <Resource Include="cheese.png" />
     <Resource Include="paste.png" />
     <Resource Include="pepperoni.png" />
@@ -30,7 +38,19 @@
     <Resource Include="нарисуй кусочек сыра_Kandinsky 2.1 (1).png" />
     <Resource Include="нарисуй кусочек сыра_Kandinsky 2.1.png" />
     <Resource Include="нарисуй_баночку_от_томатной_пасты_hainz_Kandinsky_2_1 (1).png" />
+    <Resource Include="пиццаобрез.png" />
+    <Resource Include="пиццасбоку.png" />
+    <Resource Include="фонпотемнееспечью.jpg" />
+    <Resource Include="фонспесьюиогнем (1).jpg" />
+    <Resource Include="фонспечью.jpg" />
+    <Resource Include="фонспечьютемнее.jpg" />
     <Resource Include="шпинат.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="firedrova.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

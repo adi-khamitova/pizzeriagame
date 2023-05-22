@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizzeria"
         mc:Ignorable="d"
-        Title="pizza" Height="768" Width="1152">
+        Title="pizza" Height="768" Width="1152" Loaded="Window1_Loaded"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -271,7 +273,7 @@
                     <ImageBrush ImageSource="/шпинат.png"/>
                 </Rectangle.Fill>
             </Rectangle>
-            <Button x:Name="nextbutton" Content="NEXT" Canvas.Left="995" Canvas.Top="667" Height="35" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top" Click="NextButton_Click" FontFamily="Century Schoolbook" FontSize="20" Background="#FFF2CE9E" Foreground="#FF77321E" BorderBrush="#FF551A15"/>
+            <Button x:Name="nextbutton" Content="NEXT" Canvas.Left="976" Canvas.Top="679" Height="35" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top" Click="NextButton_Click" FontFamily="Century Schoolbook" FontSize="20" Background="#FFF2CE9E" Foreground="#FF77321E" BorderBrush="#FF551A15"/>
             <Button x:Name="cheesebutton" Content="CHEESE" Canvas.Left="633" Canvas.Top="73" Height="34" Width="82" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Century Schoolbook" FontSize="16" Click="cheesebutton_Click"/>
             <Button x:Name="tomatobutton" Content="TOMATO" Canvas.Left="540" Canvas.Top="161" Height="33" Width="94" FontFamily="Century Schoolbook" FontSize="16" Background="{x:Null}" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center" Click="tomatobutton_Click">
                 <Button.RenderTransform>
@@ -283,7 +285,10 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
+            <Label Content="I want a pizza&#xA;with tomato paste,&#xA;some cheese,&#xD;&#xA;pepperoni&#xA;and spinach, please!" Canvas.Left="304" Canvas.Top="358" Background="#FFF2CE9E" BorderBrush="#FF551A15" Foreground="#FF77321E" FontFamily="Century Schoolbook" FontSize="24" Height="162" Width="243"/>
         </Canvas>
+        <Label x:Name="TimerLabel" Content="60" HorizontalAlignment="Left" Margin="57,69,0,0" VerticalAlignment="Top" Height="75" Width="68" FontFamily="Century Schoolbook" FontSize="48" Foreground="#FFF2CE9E" Background="{x:Null}"/>
+
     </Grid>
 
 </Window>

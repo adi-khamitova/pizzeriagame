@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pizzeria"
         mc:Ignorable="d"
-        Title="pizza" Height="768" Width="1152">
+        Title="pizza" Height="768" Width="1152"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    <Window.Background>
+        <ImageBrush ImageSource="/backgroundfor3_3.jpg"/>
+    </Window.Background>
     <Grid>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="97,129,0,0" VerticalAlignment="Top" Height="67" Width="87" Click="button1_Click"/>
-
+        <Label x:Name="resultbox" Content="Your pizza is    from 100!&#xD;&#xA;Thanks!" HorizontalAlignment="Left" Margin="372,298,0,0" VerticalAlignment="Top" Height="129" Width="561" FontFamily="Century Schoolbook" FontSize="36" Background="#FFF2CE9E" BorderBrush="#FF551A15" Foreground="#FF77321E"/>
     </Grid>
 </Window>
